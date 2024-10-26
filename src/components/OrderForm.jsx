@@ -1,9 +1,21 @@
 import React from 'react';
 import './styles/OrderForm.css';
+import { useState } from 'react';
 
 const OrderForm = () => {
     const products = ['Collar', 'Harness', 'Leash'];
     const prices = [29.0, 57.0, 30.0];
+
+    const [productIndex, setProductIndex] = useState(0);
+    const [quantity, setQuantity] = useState(1);
+
+    const selectProduct = (event) => {
+        setProductIndex(event.target.value);
+    };
+
+    const correctQuantity = (quantity) => {
+        setQuantity((prevQuantity) => Math.max(prevQuantity + quantity, 0));
+      };
 
     return (
         <div className="order-form">
@@ -12,14 +24,23 @@ const OrderForm = () => {
           {}
           <div className="product-selection">
             <label htmlFor="product-dropdown">Product:</label>
-            <select id="product-dropdown">
+            <select id="product-dropdown"
+            value={productIndex}
+            onChange={selectProduct}>
               {products.map((product, index) => (
                 <option key={index} value={index}>
-                  {product} - ${prices[index].toFixed(2)}
+                  {product}  ({prices[index].toFixed(2)}€)
                 </option>
               ))}
             </select>
           </div>
+            {}
+            <div className="quantity">
+            <label htmlFor="quantity">Quantity:</label> {}
+            <button onClick={() => correctQuantity(-1)}>-</button>
+            <span>{quantity}</span>
+            <button onClick={() => correctQuantity(1)}>+</button>
+            </div>
         </div>
       );
     };

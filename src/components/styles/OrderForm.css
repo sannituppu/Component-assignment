@@ -1,0 +1,13 @@
+.product-selection {
+    margin-bottom: 10px;
+}
+
+.product-selection select {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+button {
+    margin-left: 20px;
+    margin-right: 20px;
+}
