@@ -1,6 +1,7 @@
 import React from 'react';
 import headerImage from '../components/images/logo.jpg'; 
 import './styles/ComponentUI.css'
+import OrderForm from '../components/OrderForm.jsx';
 
 const Header = ({ image, title }) => (
   <div className="header">
@@ -13,6 +14,8 @@ const ProductPage = () => {
   return (
     <div>
       <Header image={headerImage} title="Welcome to Product Page!" />
+      <OrderForm /> {}
+
     </div>
   );
 };
