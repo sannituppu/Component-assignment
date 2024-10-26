@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/OrderForm.css';
 import { useState } from 'react';
+import OrderInfo from './OrderInfo'
 
 const OrderForm = () => {
     const products = ['Collar', 'Harness', 'Leash'];
@@ -34,6 +35,7 @@ const OrderForm = () => {
               ))}
             </select>
           </div>
+
             {}
             <div className="quantity">
             <label htmlFor="quantity">Quantity:</label> {}
@@ -41,6 +43,13 @@ const OrderForm = () => {
             <span>{quantity}</span>
             <button onClick={() => correctQuantity(1)}>+</button>
             </div>
+
+            {}
+            <OrderInfo 
+                productName={products[productIndex]} 
+                price={prices[productIndex]} 
+                quantity={quantity} 
+            />
         </div>
       );
     };
