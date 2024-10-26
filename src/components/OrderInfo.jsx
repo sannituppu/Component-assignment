@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/OrderInfo.css'
 
 const OrderInfo = ({ productName, price, quantity }) => {
     const totalPrice = (price * quantity).toFixed(2);
