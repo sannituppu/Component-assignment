@@ -1,0 +1,12 @@
+.dogPhotoContainer {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    padding: 100px;
+}
+
+.dogImage {
+    max-width: 50%;
+    max-height: 500px;
+    margin-right: 20px;
+}

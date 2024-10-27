@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import './OpenData.css';
 
 const DogPhoto = () => {
   const [dogPhoto, setDogPhoto] = useState('');
@@ -16,9 +17,9 @@ const DogPhoto = () => {
   };
 
   return (
-    <div>
-      <img src={dogPhoto} alt="Another Dog!"/>
-      <button onClick={fetchDogPhoto}>Click for another Dog!</button>
+    <div className="dogPhotoContainer">
+      <img src={dogPhoto} alt="Another Dog!" className="dogImage"/>
+      <button onClick={fetchDogPhoto} className="dogButton">Click for another Dog!</button>
     </div>
   );
 };
