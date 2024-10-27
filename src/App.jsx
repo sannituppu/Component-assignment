@@ -1,10 +1,10 @@
 import React from 'react';
-import ProductPage from './components/ComponentUI';
+import DogPhoto from './OpenData';
 
 function App() {
   return (
     <div className="App">
-      <ProductPage /> {}
+      <DogPhoto />
     </div>
   );
 }
